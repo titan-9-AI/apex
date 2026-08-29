@@ -1,0 +1,8 @@
+flask==2.3.3
+reportlab==4.0.4
+weasyprint==58.1
+pandas==2.0.3
+jinja2==3.1.2
+matplotlib==3.7.2
+numpy==1.24.3
+sqlite3

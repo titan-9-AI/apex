@@ -74,7 +74,7 @@ export default function CheckoutScreen() {
 
         <Text variant="subhead" style={styles.sectionTitle}>แพลตฟอร์มที่เลือก</Text>
         <View style={styles.grid}>
-          {settings.platforms.map((p) => {
+          {settings.platforms.filter((p) => p.enabled !== false).map((p) => {
             const on = selected.includes(p.id);
             return (
               <Pressable key={p.id} onPress={() => toggle(p.id)} style={[styles.plat, { borderColor: on ? c.accent : c.border, backgroundColor: on ? c.accentSoft : c.surface }]}>

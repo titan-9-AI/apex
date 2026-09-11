@@ -34,7 +34,7 @@ export default function PricingScreen() {
 
         <Text variant="subhead" style={{ color: '#fff', marginBottom: 10 }}>เลือกแพลตฟอร์ม</Text>
         <View style={styles.grid}>
-          {settings.platforms.map((p) => {
+          {settings.platforms.filter((p) => p.enabled !== false).map((p) => {
             const on = selected.includes(p.id);
             return (
               <Pressable

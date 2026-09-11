@@ -1,6 +1,6 @@
 // ข้อมูลหลักของแอป APEX TITAN-9 AI — ราคา แพลตฟอร์ม ช่องชำระ คำตอบ
 
-export type Platform = { id: string; name: string; dailyBudget: number };
+export type Platform = { id: string; name: string; dailyBudget: number; enabled?: boolean };
 export type DurationOption = { days: number; label: string; aiFee: number };
 
 export const SERVICE_PER_DAY = 199; // บาท/วัน

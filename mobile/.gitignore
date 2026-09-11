@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# native builds
+android/
+ios/
+
+# env (เก็บ .env.example ไว้)
+.env
+.env.local
+.env.*.local
+
+# misc
+.DS_Store
+*.log
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*

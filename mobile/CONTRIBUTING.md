@@ -1,32 +1,30 @@
-# การมีส่วนร่วมพัฒนา (Contributing)
+# แนวทางร่วมพัฒนา — APEX TITAN-9 AI (แอปมือถือ)
 
 ## เริ่มต้น
-
 ```bash
-cd mobile
 npm install
-cp .env.example .env      # ใส่ค่าจริง
-npx expo start
+npx expo start          # dev server (สแกน QR ด้วย Expo Go)
+npx expo start --web    # เปิดในเบราว์เซอร์
 ```
 
-## ก่อนส่งงาน (ทุกครั้ง)
+## โครงสร้าง
+- `app/` — หน้าจอทั้งหมด (Expo Router, file-based)
+  - `app/(tabs)/` — แดชบอร์ด / แชต AI / แพ็กเกจ / ออเดอร์ / ใบเสร็จ / ตั้งค่า / โปรไฟล์
+  - `app/receipt/[id].tsx` — รายละเอียดใบเสร็จ
+- `components/` — คอมโพเนนต์ UI ที่ใช้ซ้ำ (ui.tsx, SettingsScreen, ErrorBoundary)
+- `context/` — สถานะทั้งแอป (Auth, Settings, Theme)
+- `lib/` — ชั้นเชื่อมข้อมูล (supabase, api, ai, config, titan)
+- `data/` — ข้อมูลธุรกิจ (ราคา/แพลตฟอร์ม/ระยะเวลา)
+- `constants/theme.ts` — โทเคนสี/ระยะ/ตัวอักษร
 
+## ก่อนส่งงาน
 ```bash
-npx tsc --noEmit                    # ต้องไม่มี error
-npx expo export --platform web      # ต้อง build ผ่าน
+npx tsc --noEmit                 # ต้องผ่าน 0 error
+npx expo export --platform web   # ต้อง build ผ่าน
 ```
 
-## แนวทางเขียนโค้ด
-
-- **หน้าจอ** อยู่ใน `app/` (expo-router) — ตั้งชื่อไฟล์ตามเส้นทาง
-- **ตรรกะธุรกิจ** อยู่ใน `lib/` — อย่าเรียก Supabase ตรง ๆ จากหน้าจอ ให้ผ่าน `lib/api.ts`
-- **ค่าคงที่/ค่า config** อยู่ใน `lib/config.ts` และ `data/business.ts`
-- **สถานะร่วม** อยู่ใน `context/` (Auth / Settings / Theme)
-- ข้อความทั้งหมดเป็นภาษาไทย ใช้ `components/ui.tsx` เป็นชุด UI กลาง
-- หลีกเลี่ยง hardcode สี/ราคา ให้ดึงจากธีม (`constants/theme.ts`) และค่าตั้งระบบ
-
-## ความปลอดภัย
-
-- **ห้าม** ใส่คีย์ลับ (OpenAI, service role) ลงในโค้ดฝั่งแอป
-- คีย์ OpenAI เก็บเป็น Secret ของ Edge Function `titan9` เท่านั้น
-- ใช้ anon key ผ่าน `.env` (EXPO_PUBLIC_*) ห้าม commit `.env`
+## ข้อตกลง
+- ใช้ TypeScript เข้ม (ห้าม `any`)
+- สี/ขนาด ใช้โทเคนจาก `constants/theme.ts` ไม่ hardcode
+- ฟังก์ชันที่แตะ Supabase ให้อยู่ใน `lib/api.ts`
+- อย่าแก้ `app.json`/`babel.config.js`/`metro.config.js` โดยไม่อธิบายเหตุผล

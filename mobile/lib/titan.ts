@@ -1,7 +1,7 @@
 // คำตอบ Titan-9 AI แบบกฎ (rule-based) + เชื่อม AI จริงผ่าน Edge Function titan9
 import { PLATFORMS, DURATIONS, SERVICE_PER_DAY, computeTotal, formatTHB, PAYMENT } from '../data/business';
 
-export const AI_ENDPOINT = 'https://pnluhkfzxtprnpwwcrlq.supabase.co/functions/v1/titan9';
+export { AI_ENDPOINT } from './config';
 export const CONTACT_LINE = 'apex-titan9';
 
 export type ChatMsg = { role: 'user' | 'assistant'; content: string };

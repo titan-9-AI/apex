@@ -12,6 +12,7 @@ export type Order = {
   ad_spend: number;
   platforms: string[];
   status: 'pending' | 'confirmed' | 'paid' | 'cancelled';
+  receipt_id?: string | null;
   created_at: string;
 };
 
@@ -23,12 +24,24 @@ export type ChatLog = {
   created_at?: string;
 };
 
+/** รายการออเดอร์ — แอดมินเห็นทั้งหมด สมาชิกเห็นของตัวเอง */
 export async function listOrders(opts: { email: string; isAdmin: boolean }) {
   let q = supabase.from(TABLES.orders).select('*').order('created_at', { ascending: false });
   if (!opts.isAdmin) q = q.eq('email', opts.email);
   const { data, error } = await q;
   if (error) return { data: [] as Order[], error: error.message };
   return { data: (data ?? []) as Order[], error: null as string | null };
+}
+
+/** ออเดอร์เดียวตามรหัส (ใช้ในหน้าใบเสร็จ) */
+export async function getOrder(id: string) {
+  const { data, error } = await supabase
+    .from(TABLES.orders)
+    .select('*')
+    .eq('id', id)
+    .maybeSingle();
+  if (error) return { data: null as Order | null, error: error.message };
+  return { data: (data ?? null) as Order | null, error: null as string | null };
 }
 
 export async function createOrder(order: Order) {
@@ -57,6 +70,7 @@ export async function listChatLogs(email: string, limit = 50) {
   return { data: (data ?? []) as ChatLog[], error: null as string | null };
 }
 
+/** สรุปยอดจากรายการออเดอร์ */
 export function summarizeOrders(orders: Order[]) {
   const paid = orders.filter((o) => o.status === 'paid');
   return {

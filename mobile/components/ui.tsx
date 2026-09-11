@@ -1,4 +1,3 @@
-================================================================
 // คอมโพเนนต์ UI พื้นฐาน (ธีมจาก ThemeContext)
 import React from 'react';
 import {
@@ -118,5 +117,3 @@ export function Card({ children, pressable, onPress, style }: { children: React.
 
 const styles = StyleSheet.create({ scrollPad: { padding: 16, paddingBottom: 40 } });
 
-
-================================================================

@@ -1,4 +1,3 @@
-================================================================
 // แท็บโปรไฟล์ — แสดง/ออกจากระบบสมาชิก
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -73,5 +72,3 @@ const styles = StyleSheet.create({
   adminBadge: { flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: 8, paddingVertical: 3, borderRadius: 999, alignSelf: 'flex-start', marginTop: 6 },
 });
 
-
-================================================================

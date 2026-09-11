@@ -1,4 +1,3 @@
-================================================================
 // แท็บแชต — คุยกับ Titan-9 AI (กฎสำรอง + ลองเชื่อม AI จริงผ่าน Edge Function)
 import React, { useState, useRef, useEffect } from 'react';
 import {
@@ -131,5 +130,3 @@ const styles = StyleSheet.create({
   sendBtn: { width: 42, height: 42, borderRadius: 21, alignItems: 'center', justifyContent: 'center' },
 });
 
-
-================================================================

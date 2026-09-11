@@ -1,4 +1,3 @@
-================================================================
 // ทางเข้าหลัก — ถ้าเข้าสู่ระบบแล้วไปแท็บ ถ้ายังไปล็อกอิน
 import { Redirect } from 'expo-router';
 import { useAuth } from '../context/AuthContext';
@@ -19,5 +18,3 @@ export default function Index() {
   return <Redirect href={member ? '/(tabs)' : '/login'} />;
 }
 
-
-================================================================

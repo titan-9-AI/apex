@@ -1,4 +1,3 @@
-================================================================
 // หน้าเข้าสู่ระบบ/สมัครสมาชิก — แบบแอปเต็มจอ
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -72,5 +71,3 @@ const styles = StyleSheet.create({
   form: { gap: 4 },
 });
 
-
-================================================================

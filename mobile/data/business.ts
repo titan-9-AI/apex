@@ -1,4 +1,3 @@
-================================================================
 // ข้อมูลหลักของแอป APEX TITAN-9 AI — ราคา แพลตฟอร์ม ช่องชำระ คำตอบ
 
 export type Platform = { id: string; name: string; dailyBudget: number };
@@ -47,5 +46,3 @@ export function formatTHB(n: number): string {
   return n.toLocaleString('th-TH') + ' บาท';
 }
 
-
-================================================================

@@ -1,4 +1,3 @@
-================================================================
 // หน้าสั่งซื้อ/ชำระเงิน — สรุปออเดอร์ + ช่องทางชำระเงิน (โหลดค่าจาก settings)
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet, Pressable } from 'react-native';
@@ -164,5 +163,3 @@ const styles = StyleSheet.create({
   btn: { alignSelf: 'stretch', alignItems: 'center', paddingVertical: 14, borderRadius: 14 },
 });
 
-
-================================================================

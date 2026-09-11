@@ -1,4 +1,3 @@
-================================================================
 // SettingsContext — ค่าตั้งค่าระบบที่แอดมินแก้ได้ + บันทึก AsyncStorage และซิงก์ขึ้น Supabase
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -123,5 +122,3 @@ export function calcTotal(s: AppSettings, platformIds: string[], days: number): 
   return s.servicePerDay * days + (dur?.aiFee ?? 0) * n + budget * days;
 }
 
-
-================================================================

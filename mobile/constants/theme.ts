@@ -1,4 +1,3 @@
-================================================================
 export const palette = {
   purple: '#7c3aed',
   purpleSoft: '#ede9fe',
@@ -56,5 +55,3 @@ export const lightTheme: Theme = {
   type: { title: 32, heading: 22, body: 16, caption: 13, footnote: 11 },
 };
 
-
-================================================================

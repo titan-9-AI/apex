@@ -1,4 +1,3 @@
-================================================================
 // แท็บแดชบอร์ดสมาชิก — ดูออเดอร์ + ข้อมูลบัญชี
 import React, { useState, useCallback } from 'react';
 import { View, ScrollView, StyleSheet, Pressable, RefreshControl } from 'react-native';
@@ -104,5 +103,3 @@ const styles = StyleSheet.create({
   loginBtn: { alignSelf: 'stretch', alignItems: 'center', paddingVertical: 14, borderRadius: 14 },
 });
 
-
-================================================================

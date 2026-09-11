@@ -1,4 +1,3 @@
-================================================================
 -- APEX @TITAN-9 AI (แอปมือถือ) — สร้างตาราง settings + orders
 -- วิธีใช้: เปิด Supabase Dashboard → SQL Editor → วางโค้ดนี้ → กด Run
 
@@ -64,9 +63,7 @@ create policy "settings_admin_update" on public.settings
   for update using (auth.jwt() ->> 'email' = 'apexous.t9@gmail.com');
 
 
-================================================================
 วิธีติดตั้งและรัน (สรุป)
-================================================================
 1) ติดตั้ง dependencies
    npm install
    npx expo install expo-router expo-image expo-linear-gradient expo-blur expo-clipboard expo-status-bar react-native-safe-area-context @react-native-async-storage/async-storage expo-crypto expo-constants expo-splash-screen react-native-web react-dom @expo/metro-runtime
@@ -92,6 +89,4 @@ create policy "settings_admin_update" on public.settings
    - เติมเครดิต OpenAI ที่ platform.openai.com/settings/organization/billing
    - ถ้าไม่ตั้ง AI แอปจะตอบด้วยกฎสำรองอัตโนมัติ
 
-================================================================
 จบไฟล์ — APEX @TITAN-9 AI
-================================================================

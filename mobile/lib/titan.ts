@@ -1,4 +1,3 @@
-================================================================
 // คำตอบ Titan-9 AI แบบกฎ (rule-based) + เชื่อม AI จริงผ่าน Edge Function titan9
 import { PLATFORMS, DURATIONS, SERVICE_PER_DAY, computeTotal, formatTHB, PAYMENT } from '../data/business';
 
@@ -38,5 +37,3 @@ export function replyByRules(text: string): string {
   return `ขอโทษค่ะ ยังไม่เข้าใจคำถามนั้นดีนัก อยากให้ช่วยได้ทาง: ราคา / แพลตฟอร์ม / วิธีชำระเงิน / แพ็ก 7-15-30 วัน หรือติดต่อแอดมินโดยตรงที่ @${CONTACT_LINE} นะคะ`;
 }
 
-
-================================================================

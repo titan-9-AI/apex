@@ -1,4 +1,3 @@
-================================================================
 // Auth context — ระบบสมาชิก (รองรับ demo + Supabase Auth)
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -83,5 +82,3 @@ export function useAuth(): AuthCtx {
   return v;
 }
 
-
-================================================================

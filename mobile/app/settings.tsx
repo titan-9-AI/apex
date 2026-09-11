@@ -1,4 +1,3 @@
-================================================================
 // หน้าตั้งค่าระบบ — แอดมินเท่านั้น (แก้ราคา/แพลตฟอร์ม/งบ/ช่องชำระ + ซิงก์ขึ้น Supabase)
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet, Pressable, TextInput } from 'react-native';
@@ -165,5 +164,3 @@ const styles = StyleSheet.create({
   syncBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingVertical: 14, borderRadius: 14, marginTop: 14 },
 });
 
-
-================================================================

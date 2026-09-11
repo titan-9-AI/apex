@@ -1,4 +1,3 @@
-================================================================
 // ธีม Context — สลับโหมดสว่าง/มืด
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import { darkTheme, lightTheme, Theme } from '../constants/theme';
@@ -21,5 +20,3 @@ export function useTheme(): ThemeCtx {
   return v;
 }
 
-
-================================================================

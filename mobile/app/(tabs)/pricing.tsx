@@ -1,4 +1,3 @@
-================================================================
 // แท็บแพ็กเกจ — เลือกแพลตฟอร์ม + ระยะเวลา คำนวณราคาสด (โหลดค่าจาก SettingsContext)
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable, StyleSheet } from 'react-native';
@@ -115,5 +114,3 @@ const styles = StyleSheet.create({
   orderBtn: { alignItems: 'center', paddingVertical: 15, borderRadius: 16, marginTop: 20 },
 });
 
-
-================================================================

@@ -28,5 +28,5 @@ export async function askTitan(messages: ChatMessage[], email: string): Promise<
   const remote = await askRemote(messages, email);
   if (remote) return { reply: remote, source: 'ai' };
   const last = messages[messages.length - 1]?.content ?? '';
-  return { reply: replyByRules(text), source: 'rules' };
+  return { reply: replyByRules(last), source: 'rules' };
 }
